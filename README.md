@@ -1,0 +1,12 @@
+# FAST QUASI DOUBLE-PRECISION METHOD WITH SINGLE-PRECISION HARDWARE TO ACCELERATE SCIENTIFIC APPLICATIONS
+
+- [paper](https://www.worldscientific.com/doi/10.1142/S0219876211002708)
+- [pdf](./fast_quasi_double-precision_method_with_single-precision_hardware_to_accelerate.pdf)
+
+
+```
+FAST QUASI DOUBLE-PRECISION METHOD WITH SINGLE-PRECISION HARDWARE TO ACCELERATE SCIENTIFIC APPLICATIONS
+TETSU NARUMI (), TSUYOSHI HAMADA (), KEIGO NITADORI (), RYUJI SAKAMAKI (), and KENJI YASUOKA ()
+International Journal of Computational Methods 2011 08:03, 561-581
+```
+

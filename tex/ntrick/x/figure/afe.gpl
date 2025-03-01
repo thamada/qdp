@@ -1,0 +1,15 @@
+#set output "afe.ps"
+#set terminal postscript eps color 24
+set output "afe_org.obj"
+set terminal tgif
+
+set xlabel "Accumulation Method"
+set ylabel "Average Error in Force"
+#set logscale x 2
+set logscale y 10
+set yrange[1e-6:1e-1]
+set xrange[-1:6]
+plot "perftest_log/mixed.gpldat" using 3 with linespoints title "Exclude on the fly",\
+	"perftest_log/mixed.gpldat" using 5 with linespoints,\
+	"perftest_log/mixed.gpldat" using 5 with linespoints,\
+	"perftest_log/mixed.gpldat" using 4 with linespoints title "Exclude afterwards"

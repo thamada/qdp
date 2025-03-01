@@ -1,0 +1,99 @@
+\relax 
+\citation{cell}
+\citation{PS3}
+\citation{NVIDIA}
+\citation{XeonX7460}
+\citation{Buttari}
+\citation{Karplus}
+\citation{GROMACS}
+\citation{NAMD1}
+\citation{NAMD2}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\newlabel{sec:introduction}{{1}{1}}
+\citation{NAMD1}
+\citation{NAMD2}
+\citation{GPUneighbor}
+\citation{Hamada2}
+\citation{Takahashi1}
+\citation{Takahashi2}
+\citation{Nitadori}
+\citation{Hamada1}
+\citation{Knuth}
+\citation{Dekker}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Quasi Double-Precision Method}{2}}
+\newlabel{sec:quasidouble}{{2}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Error in floating point expression}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Knuth \& Dekker's trick}{2}}
+\newlabel{eqn:KaD1}{{5}{2}}
+\citation{highprecisionlib}
+\citation{Takahashi1}
+\citation{Takahashi2}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Knuth \& Dekker's trick in C language when $|x_S|\geq |y_S|$.}}{3}}
+\newlabel{fig:KaD1}{{1}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Knuth \& Dekker's trick in C language for arbitrary $x_S$ and $y_S$.}}{3}}
+\newlabel{fig:KaD2}{{2}{3}}
+\newlabel{eqn:KaD2}{{7}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Takahashi \& Iitaka's trick}{3}}
+\citation{Nitadori}
+\citation{Hamada1}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Takahashi \& Iitaka's trick in C language.}}{4}}
+\newlabel{fig:TaI}{{3}{4}}
+\newlabel{eqn:TaI}{{9}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}High-Performance Quasi Double-Precision Method}{4}}
+\newlabel{sec:propose}{{3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Nitadori's trick}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Takahashi \& Iitaka's trick in C language with Knuth \& Dekker's subroutines.}}{5}}
+\newlabel{fig:TaI2}{{4}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Nitadori's trick in C language with Knuth \& Dekker's subroutines.}}{5}}
+\newlabel{fig:Nitadori1}{{5}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Modified Nitadori's trick}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Proposed method : Narumi's trick}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Accumulation of forces by Nitadori's trick. For modified Nitadori's trick, line 1 must be changed from {\tt  \#if 1} to {\tt  \#if 0}, and {\tt  LARGE\_SHIFT} must be set to a large enough number to satisfy {\tt  LARGE}$\geq |${\tt  fs[k]}$|$.}}{6}}
+\newlabel{fig:Nitadori2}{{6}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Calculatioin of van der Waals forces with (modified) Nitadori's method.}}{6}}
+\newlabel{fig:calcvdw}{{7}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Accumulation of forces by proposed method. {\tt  LARGE} is set to be a large enough number to satisfy $|{\tt  a[k].hs}|\geq |{\tt  fs[k]}|$. {\tt  LOWER\_SHIFT} is set to such as 7 to prevent the second condition of Nitadori's trick.}}{7}}
+\newlabel{fig:Narumi}{{8}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Block diagram of a {\it  pair expression} in Narumi's trick. A {\tt  float} and an {\tt  int} are used, and they correspond to a 48-bit integer.}}{7}}
+\newlabel{fig:narumiblock}{{9}{7}}
+\citation{NAMD1}
+\citation{AMBER}
+\citation{PS3Narumi}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Accuracy of Narumi's trick}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Number of operations in Narumi's trick}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Numerical Test}{8}}
+\newlabel{sec:numerical}{{4}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Test systems}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Average error in force}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Average error of forces for System 1 against accumulation methods.}}{9}}
+\newlabel{fig:aef}{{10}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Average offset in force}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Performance}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Concluding Remarks}{9}}
+\newlabel{sec:conclude}{{5}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Average offset of forces for System 1 against accumulation methods. Proposed method F has no offset.}}{10}}
+\newlabel{fig:aof}{{11}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Performance of 9800GTX and GTX280 GPUs for van der Waals force calculation for System 2 with different types of methods. Proposed method F is faster than the method B, accumulation with double precision.}}{10}}
+\newlabel{fig:perf}{{12}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Accumulation methods}}{10}}
+\newlabel{tbl:method}{{1}{10}}
+\bibcite{cell}{1}
+\bibcite{PS3}{2}
+\bibcite{NVIDIA}{3}
+\bibcite{XeonX7460}{4}
+\bibcite{Buttari}{5}
+\bibcite{Takahashi1}{6}
+\bibcite{Takahashi2}{7}
+\bibcite{Hamada1}{8}
+\bibcite{Karplus}{9}
+\bibcite{GROMACS}{10}
+\bibcite{NAMD1}{11}
+\bibcite{NAMD2}{12}
+\bibcite{GPUneighbor}{13}
+\bibcite{Hamada2}{14}
+\bibcite{Knuth}{15}
+\bibcite{Dekker}{16}
+\bibcite{highprecisionlib}{17}
+\bibcite{Nitadori}{18}
+\bibcite{AMBER}{19}
+\bibcite{PS3Narumi}{20}

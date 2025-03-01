@@ -1,0 +1,15 @@
+#set output "aof.ps"
+#set terminal postscript eps color 24
+set output "aof_org.obj"
+set terminal tgif
+
+set xlabel "Accumulation Method"
+set ylabel "Average Offset of Force"
+#set logscale x 2
+set logscale y 10
+set yrange[1e-18:1e-2]
+set xrange[-1:7]
+plot "perftest_log/mixed.gpldat" using 1 with linespoints title "Exclude on the fly",\
+	"perftest_log/mixed.gpldat" using 5 with linespoints ,\
+	"perftest_log/mixed.gpldat" using 5 with linespoints ,\
+	"perftest_log/mixed.gpldat" using 2 with linespoints title "Exclude afterwards"
